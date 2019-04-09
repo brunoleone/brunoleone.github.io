@@ -1,0 +1,20 @@
+{
+  "name": "brunoleone.github.io",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Bruno Leone <leonecbruno@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/brunoleone/brunoleone.github.io",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fontawesome": "^5.8.1"
+  }
+}
