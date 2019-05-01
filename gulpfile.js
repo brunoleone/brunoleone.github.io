@@ -1,14 +1,19 @@
-const gulp = require("gulp")
-const sass = require("gulp-sass")
-const watchSass = require("gulp-watch-sass")
- 
-gulp.task("sass:watch", () => watchSass([
-  "./**/*.{scss,css}",
-  "!./libs/**/*"
-])
-  .pipe(sass())
-  .pipe(gulp.dest("./css")));
+const gulp = require('gulp');
+const sass = require('gulp-sass');
 
-gulp.task("default", () => {
-
+/** task para SASS */
+gulp.task('sass', function () {
+  return gulp.src('scss/**/*.scss')
+    .pipe(sass({
+      outputStyle: 'compressed'
+    }).on('error', sass.logError))
+    .pipe(gulp.dest('css'));
 });
+
+/** task para watch */
+gulp.task('sass:watch', function () {
+  gulp.watch('scss/**/*.scss', ['sass']);
+});
+
+/** task default */
+gulp.task('default', ['sass', 'sass:watch']);
