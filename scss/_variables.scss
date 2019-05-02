@@ -1,9 +1,11 @@
+// Cores
 $brand-primary: #5931d3;
 $brand-secundary: #434fe8;
 
+// Tipografia
 $text-color: #747474;
 
-$link-decoration: none !important;
-$font-size-base: 18px !important;
+$link-decoration: none;
 
-$degrade: linear-gradient($brand-primary, $brand-secundary);
+// Fontawesome
+$fa-font-path: '../bower_components/fontawesome/webfonts';

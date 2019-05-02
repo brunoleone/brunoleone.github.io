@@ -4,22 +4,24 @@
  */
 
 // Fontawesome
-// @import '../bower_components/fontawesome/scss/variables';
-// @import '../bower_components/fontawesome/scss/core';
-@import '../bower_components/fontawesome/scss/v4-shims.scss';
-@import '../bower_components/fontawesome/scss/regular.scss';
-@import '../bower_components/fontawesome/scss/solid.scss';
-@import '../bower_components/fontawesome/scss/brands.scss';
+@import '../bower_components/fontawesome/scss/variables';
+// @import '../bower_components/fontawesome/scss/v4-shims.scss';
 @import '../bower_components/fontawesome/scss/icons';
 
-// Core variaveis e mixins do bootstrap
-@import '../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables';
-@import '../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins';
+@import '../bower_components/fontawesome/scss/solid';
+@import '../bower_components/fontawesome/scss/brands';
+@import '../bower_components/fontawesome/scss/regular';
 
-// Normalize bootstrap
-@import '../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/normalize'
+@import './custom.scss';
 
-// Components bootstrap
+// // Core variaveis e mixins do bootstrap
+// @import '../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables';
+// @import '../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins';
+
+// // Normalize bootstrap
+// @import '../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/normalize';
+
+// // Components bootstrap
 // @import '../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/alerts';
 // @import '../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/badges';
 // @import '../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/breadcrumbs';

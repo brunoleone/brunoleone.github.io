@@ -43,8 +43,9 @@ section {
     #capa::before {
         content: "";
         position: absolute;
-        @include gradient-horizontal($brand-primary, $brand-secundary);
-        @include opacity(.9);
+        @include gradient-directional($brand-primary, $brand-secundary);
+        // @include opacity(.9);
+        // @include invisible(.9);
         width: 100%;
         position: absolute;
         color: #fff;
@@ -70,25 +71,26 @@ section {
             width: 5px;
         }
         box: {
-            shadow: 0px 0px 12px -4px $gray-light;
+            shadow: 0px 0px 12px -4px color("gray");
         };
         position: absolute;
-        bottom: -90px;
+        bottom: -75px;
     }
     
     .descriptions {
-        @include container-fixed();
+        @extend .container;
+        color: $brand-primary;
         padding: {
             top: 7em;
-        }
+        };
         span {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: {
                 bottom: 1em;
-            }
-        }
+            };
+        };
 
         i {
             color: $brand-primary;
@@ -100,16 +102,18 @@ section {
             direction: row;
         }
         .left {
-            @include make-lg-column(4);
-            @include make-md-column(6);
+            // @include make-lg-column(4);
+            // @include make-md-column(4);
             display: flex;
             flex: {
                 direction: column;
             };
         }
         .right {
-            @include make-lg-column(4);
-            @include make-md-column(6);
+            // @include make-lg-column(4);
+            // @include make-md-column(4);
+            // @include make-md-column-offset(3);
+
             display: flex;
             flex: {
                 direction: column;
@@ -119,24 +123,16 @@ section {
 }
 
 .tecnologias {
-    @include container-fixed();
-    max-width: 100%;
+    @extend .container;
     height: 20vh;
     display: flex;
     flex: {
         direction: row;
     };
-    justify-content: space-between;
-    background: {
-        // color: red;
-    };
+    // justify-content: space-between;
     align-items: center;
     .tecnologia {
-        min-width: 100px;
-        height: auto;
-        margin: {
-            top: 5em;
-        };
+        @extend .col-md-2;
         .svg-tec {
             color: red;
         }
@@ -159,4 +155,20 @@ section {
 
 #linguagens {
 
+}
+
+#container {
+    background-color: aquamarine;
+}
+
+.coluna {
+    @extend .col-md-2;
+    background-color: red;
+}
+
+.progress {
+    @extend .progress;
+    .progress-bar {
+        @extend .progress-bar;
+    }
 }
