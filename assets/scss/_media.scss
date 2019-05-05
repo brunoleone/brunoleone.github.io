@@ -1,0 +1,37 @@
+/*
+ * Criado por Bruno Leone
+ */
+
+@media (max-width: 425px) {
+    #header {
+        #capa {
+            height: 100vh !important;
+        }
+        .imagem-profile{
+            display: none;
+        }
+    }
+    .descriptions {
+        flex-direction: column !important;
+    }
+}
+
+@media (max-width: 768px) {
+    #header {
+        h1 {
+            margin-bottom: 5rem;
+        }
+    }
+    .descriptions {
+        flex-direction: column !important;
+        .left {
+            max-width: 100% !important;
+        }
+        .right {
+            max-width: 100% !important;
+        }
+        i {
+            margin-right: 10px;
+        }
+    }
+}

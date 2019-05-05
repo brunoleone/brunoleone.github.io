@@ -1,0 +1,15 @@
+/**!
+ * Leonva v1.0.0 (https://leonva.com.br)
+ * Copyright 2019 Leonva
+ */
+
+// Fontawesome
+$fa-font-path: "../fonts";
+
+@import '../../bower_components/fontawesome/scss/variables';
+// @import '../../bower_components/fontawesome/scss/v4-shims.scss';
+@import '../../bower_components/fontawesome/scss/icons';
+
+@import '../../bower_components/fontawesome/scss/solid';
+@import '../../bower_components/fontawesome/scss/brands';
+@import '../../bower_components/fontawesome/scss/regular';

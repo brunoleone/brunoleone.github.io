@@ -1,0 +1,191 @@
+@import './plugins';
+@import './custom';
+@import './media';
+
+html{
+    overflow: none;
+}
+
+section {
+    min-height: 100vh;
+    padding: {
+        top: 5em;
+    }
+}
+
+#header {
+    padding: {
+        bottom: 30px;
+    }
+    overflow: none;
+    #capa {
+        width: 100%;
+        height: 50vh;
+        @extend .d-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        background-image: url('../img/pic01.jpg');
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        line-height: 1;
+        text-align: center;
+
+        .capa-description {
+            @extend .container;
+            z-index: 2;
+        }
+    }
+
+    #capa::before {
+        content: "";
+        position: absolute;
+        @include gradient-directional($secundary, $primary, 90deg);
+        opacity: .9;
+        filter: alpha(opacity=50); /* For IE8 and earlier */
+        width: 100%;
+        position: absolute;
+        color: #fff;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .imagem-profile {
+        width: 150px;
+        height: 150px;
+        z-index: 5;
+        background: {
+            image: url('../img/profile1.jpg');
+            position: center;
+            size: cover;
+        }
+        border: {
+            radius: 50%;
+            color: #fff;
+            style: solid;
+            width: 5px;
+        }
+        box: {
+            shadow: 0px 0px 12px -4px color("gray");
+        }
+        position: absolute;
+        bottom: -75px;
+    }
+
+    .descriptions {
+        @extend .container;
+        color: $primary;
+        padding: {
+            top: 7em;
+        }
+        span {
+            @extend .d-flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: {
+                bottom: 1em;
+            }
+        }
+
+        i {
+            color: $primary;
+            font-size: 2em;
+        }
+
+        @extend .d-flex;
+        flex: {
+            direction: row;
+        }
+        .left {
+            @extend .col-lg-4;
+            @extend .col-md-4;
+            @extend .col-sm-12;
+
+            @extend .d-flex;
+            @extend .flex-column;
+        }
+        .right {
+            @extend .col-lg-4;
+            @extend .col-md-4;
+            @extend .col-sm-12;
+            @extend .offset-lg-4;
+
+            @extend .d-flex;
+            @extend .flex-column;
+        }
+    }
+}
+
+.title {
+    @extend .d-flex;
+    @extend .flex-column;
+    @extend .align-items-center;
+
+    color: theme-color("primary");
+    margin: {
+        bottom: 2em;
+    }
+    h1 {
+        position: relative;
+    }
+    .line-title::before {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        background-image: linear-gradient(200deg, $primary, $secundary);
+        width: 30%;
+        height: 2px;
+        border-radius: 50px;
+    }
+}
+
+#frameworks {
+    @extend .container;
+}
+
+#linguagens {
+    @extend .container;
+}
+
+#habilidades {
+    @extend .container;
+    .area-skills{
+        @extend .row;
+    }
+}
+
+.tecnologias {
+    @extend .row;
+    .tecnologia {
+        @extend .col-md-4;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        text: {
+            align: center !important;
+        }
+        .svg-tec {
+            max-width: 150px;
+            fill: $primary;
+        }
+    }
+}
+
+.progress {
+    @extend .progress;
+    height: 30px;
+    margin: {
+        top: 10px;
+    }
+    .progress-bar {
+        @extend .progress-bar;
+        padding-left: 20%;
+        align-items: start;
+        background: {
+            image: linear-gradient(90deg, $primary, $secundary);
+        }
+    }
+}
