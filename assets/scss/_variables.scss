@@ -9,3 +9,18 @@ $link-decoration: none;
 
 // Fontawesome
 $fa-font-path: '../bower_components/fontawesome/webfonts';
+
+@font-face {
+    font-family: 'Poppins';
+    font-size: small;
+    font-weight: 500;
+    src: url('../../fonts/poppins/Poppins-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-size: normal;
+    font-weight: 400;
+    src: url('../../fonts/poppins/Poppins-Bold.ttf') format('truetype');
+    src: url('../../fonts/poppins/Poppins-light.ttf') format('truetype')
+}

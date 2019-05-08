@@ -1,5 +1,5 @@
 @import '../variables';
-// @import '../plugins';
+@import '../custom';
 
 body {
     overflow: none;
@@ -13,13 +13,6 @@ html {
     height: 100vh;
 }
 
-h1.title {
-    color: $text-color;
-    text: {
-        align: center;
-    };
-}
-
-a {
-    text-decoration: none;
+.wrapper {
+    @extend .container;
 }

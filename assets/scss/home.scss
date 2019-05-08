@@ -129,7 +129,8 @@ section {
     margin: {
         bottom: 2em;
     }
-    h1 {
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: $font-weight-normal;
         position: relative;
     }
     .line-title::before {
@@ -143,16 +144,7 @@ section {
     }
 }
 
-#frameworks {
-    @extend .container;
-}
-
-#linguagens {
-    @extend .container;
-}
-
 #habilidades {
-    @extend .container;
     .area-skills{
         @extend .row;
     }
