@@ -3,24 +3,23 @@
  */
 
 @media (max-width: 425px) {
-    #header {
-        #capa {
-            height: 100vh !important;
-        }
-        .imagem-profile{
-            display: none;
-        }
+    .header-parallax {
+        height: 100vh !important;
     }
     .descriptions {
         flex-direction: column !important;
     }
+    .main {
+        top: 100vh !important;
+    }
 }
 
-@media (max-width: 768px) {
-    #header {
-        h1 {
-            margin-bottom: 5rem;
-        }
+@media (min-width: 768px) {
+    .header-parallax {
+        height: 45vh !important;
+    }
+    .main {
+        top: 45vh !important;
     }
     .descriptions {
         flex-direction: column !important;
@@ -33,5 +32,11 @@
         i {
             margin-right: 10px;
         }
+    }
+}
+
+@media (min-width: 768px){
+    .descriptions {
+        flex-direction: row !important;
     }
 }
